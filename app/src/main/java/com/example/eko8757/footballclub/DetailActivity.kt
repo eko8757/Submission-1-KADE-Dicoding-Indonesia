@@ -1,54 +1,23 @@
 package com.example.eko8757.footballclub
 
-import android.graphics.Typeface
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
-import android.view.Gravity
-import android.widget.ImageView
-import android.widget.TextView
 import com.bumptech.glide.Glide
-import org.jetbrains.anko.*
+import kotlinx.android.synthetic.main.activity_detail.*
 
 class DetailActivity : AppCompatActivity() {
 
     var items: Item? = null
-    lateinit var nameTextView: TextView
-    lateinit var descTextView: TextView
-    lateinit var ImageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        verticalLayout {
-            topPadding = 16
-            gravity = Gravity.CENTER_HORIZONTAL
+        setContentView(R.layout.activity_detail)
 
-            ImageView = imageView() {
-            }.lparams(width = 170, height = 170)
-
-            nameTextView = textView {
-                padding = dip(16)
-                textSize = 20F
-                typeface = Typeface.DEFAULT_BOLD
-                gravity = Gravity.CENTER_HORIZONTAL
-            }
-
-            descTextView = textView {
-                text = items?.desc
-                textSize = 15F
-                padding = dip(15)
-                gravity = Gravity.CENTER_HORIZONTAL
-            }.lparams {
-                width = matchParent
-            }
-        }
-
-        var intent = intent
+        val intent = intent
 
         items = intent.getParcelableExtra("name")
-        Log.d("bebas", items?.name +"123")
-        nameTextView.text = items?.name
-        descTextView.text = items?.desc
-        Glide.with(this).load(items?.image).into(ImageView)
+        tv_name_detail.text = items?.name
+        tv_desc_detail.text = items?.desc
+        Glide.with(this).load(items?.image).into(img_detail)
     }
 }

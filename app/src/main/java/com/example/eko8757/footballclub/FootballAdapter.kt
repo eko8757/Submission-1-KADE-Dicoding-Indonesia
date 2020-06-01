@@ -34,7 +34,6 @@ class FootballAdapter(private val context: Context, private val items : List<Ite
             itemView.setOnClickListener {
                 listener (items)
             }
-
         }
     }
 }
