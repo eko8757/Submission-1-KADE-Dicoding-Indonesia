@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Submission-1-KADE-Dicoding-Indonesia.iml" filepath="$PROJECT_DIR$/.idea/Submission-1-KADE-Dicoding-Indonesia.iml" group="Submission-1-KADE-Dicoding-Indonesia" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Submission-1-KADE-Dicoding-Indonesia/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Submission-1-KADE-Dicoding-Indonesia/app" />
     </modules>
   </component>
 </project>
