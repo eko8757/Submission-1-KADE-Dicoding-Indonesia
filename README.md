@@ -1,2 +1,3 @@
-# myFootbal-v.1-using-API
-This Application for display Logo and Name from team Football
+# Kotlin Android Developer Expert (Submission 1)
+
+Pada submission ini masih menggunakan data statis yang didapat dari kelas KADE
