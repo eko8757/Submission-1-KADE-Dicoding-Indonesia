@@ -1,10 +1,10 @@
 package com.example.eko8757.footballclub
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.intentFor
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,9 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         club_list.layoutManager = LinearLayoutManager(this)
         club_list.adapter = FootballAdapter(this, items) {
-            startActivity(intentFor<DetailActivity>("name" to it))
+            val i = Intent(this, DetailActivity::class.java)
+            i.putExtra("name", it)
+            startActivity(i)
         }
-
     }
 
     private fun initData() {
@@ -30,8 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         items.clear()
         for (i in name.indices) {
-            items.add(Item(name[i], desc[i], image.getResourceId(i,0)))
+            items.add(Item(name[i], desc[i], image.getResourceId(i, 0)))
         }
     }
-
 }
